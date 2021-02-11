@@ -1,0 +1,23 @@
+$mainfont: "Poppins", sans-serif;
+$bgcolor: rgb(25, 27, 50);
+
+
+.About{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgcolor;
+    font-family: $mainfont;
+    color: white;
+    padding: 1rem 1rem;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    width: 20rem;
+    position: absolute;
+    top: 3rem;
+   right: 23rem;
+
+
+
+
+}

@@ -1,0 +1,106 @@
+$mainfont: 'Poppins',
+sans-serif;
+.Nav1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 1rem 10rem;
+    font-family: $mainfont;
+    font-weight: 600;
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    
+  
+    .NavRight {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding-right: 0rem;
+        #home {
+            margin-right: 2rem;
+            font-size: 22px;
+        }
+        .NavItems {
+            
+            margin-right: 2rem;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            &:hover>.line {
+                width: 2rem;
+            }
+
+            #About{
+                position: relative;
+            }
+            .line {
+                width: 0rem;
+                height: 2px;
+                background: white;
+                transition: width .6s;
+            }
+        }
+        .whiteCircle {
+            display: none;
+            position: absolute;
+            top: -1rem;
+            right: 1rem;
+            height: 70px;
+            width: 70px;
+            background-color: white;
+            border-radius: 50%;
+            z-index: 1;
+            transition: .3s ease-in-out;
+            // animation: myMove 5s ease-in-out;
+            // @keyframes myMove {
+            //     0% {
+            //         opacity: 0;
+            //         scale: 0;
+            //     }
+            //     75% {
+            //         opacity: 0.7;
+            //         scale: 1.5;
+            //     }
+            //     100% {
+            //         opacity: 1;
+            //         scale: 2;
+            //     }
+            // }
+        }
+        .envelope {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: black;
+            position: relative;
+            z-index: 99;
+            .far {
+                font-size: 18px;
+                z-index: 99;
+                &:hover+.whiteCircle {
+                    width: 200px;
+                }
+            }
+            .floatContact {
+             
+                top: 4rem;
+                right: .6rem;
+                position: absolute;
+                writing-mode: tb-rl;
+                width: auto;
+                white-space: nowrap;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

@@ -1,0 +1,183 @@
+$mainfont: "Poppins", sans-serif;
+$bgcolor: rgb(25, 27, 50);
+.MainSlider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 120vh;
+  font-family: $mainfont;
+  overflow: hidden;
+
+  .SliderImg {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    img {
+      height: 100vh;
+      max-width: 100%;
+      background-position: center;
+      filter: grayscale(50%);
+    }
+    .leftClick {
+      position: absolute;
+      right: 10rem;
+      bottom: 5rem;
+      height: 50px;
+      width: 50px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+
+      .fas {
+        color: white;
+        font-size: 20px;
+      }
+    }
+    .rightClick {
+      position: absolute;
+      right: 5rem;
+      bottom: 5rem;
+      height: 50px;
+      width: 50px;
+      border: 2px solid rgb(255, 255, 255);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      cursor: pointer;
+
+      .fas {
+        font-size: 22px;
+        color: white;
+      }
+    }
+    .FooterSlider {
+      position: absolute;
+      bottom: 3rem;
+      left: 10rem;
+      display: flex;
+      flex-direction: row;
+      font-size: 22px;
+      color: white;
+      background-color: $bgcolor;
+      padding: 1rem 2rem;
+
+      .fas {
+        font-size: 30px;
+        margin-right: 1rem;
+      }
+      p {
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  .contentSlider {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: white;
+
+    h1 {
+      font-size: 80px;
+    }
+    h2 {
+      font-size: 30px;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      font-size: 18px;
+      display: flex;
+
+      .btn1 {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 3.5rem;
+        width: 10rem;
+        border: 1px solid white;
+        margin-right: 1rem;
+        color: black;
+        transition: color 0.5 ease-in-out;
+
+        &:hover {
+          color: white;
+        }
+
+        p {
+          z-index: 5;
+          font-weight: 500;
+          cursor: pointer;
+
+          &:hover + .btn1Bg {
+            width: 0;
+          }
+        }
+
+        .btn1Bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 10rem;
+          height: 3.5rem;
+          background-color: white;
+          z-index: 1;
+          transition: width 0.1s ease-in-out;
+        }
+      }
+      .btn2 {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 3.5rem;
+        width: 10rem;
+        margin-right: 1rem;
+        border: 1px solid white;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: black;
+        }
+
+        p,
+        i {
+          z-index: 5;
+          font-weight: 500;
+          cursor: pointer;
+          margin-right: 5px;
+
+          &:hover + .btn2Bg {
+            width: 10rem;
+          }
+        }
+
+        .btn2Bg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0rem;
+          height: 3.5rem;
+          z-index: 1;
+          background: white;
+          transition: width 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+}
