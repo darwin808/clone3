@@ -5,7 +5,7 @@ function Section3() {
   return (
     <div className="Section3">
       <div className="leftSection3">
-        <img src={section3Img} alt="asdkjahdkjhak" />
+        <img src={section3Img} alt="asdkjahdkjhak" id="imgS3" />
       </div>
       <div className="rightSection3">
         <p className="headSection3">Proud Builders.</p>

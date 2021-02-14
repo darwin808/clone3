@@ -1,22 +1,30 @@
 import React from "react";
-import ViewButton from "../ViewButton/ViewButton";
+import ViewButtonWhite from "../ViewButton/ViewButtonWhite";
+import "./CardS6.scss";
 
 interface things {
-  img: string;
-  title: string;
+  img: any;
+  title: any;
   link?: string;
 }
 function CardS6({ img, title, link }: things) {
   return (
-    <div className="CardS6">
-      <img src={img} alt="adad" id="imgCardS6" />
-      <div className="empty"></div>
-      <h1>{title}</h1>
+    <>
+      {img && (
+        <div className="CardS6">
+          <img src={img} alt="adad" id="imgCardS6" />
+          <div className="empty"></div>
 
-      <div className="cardBtns6">
-        <ViewButton />
-      </div>
-    </div>
+          <div className="CardS6Container">
+            <h1>{title}</h1>
+
+            <div className="cardBtns6">
+              <ViewButtonWhite />
+            </div>
+          </div>
+        </div>
+      )}{" "}
+    </>
   );
 }
 
