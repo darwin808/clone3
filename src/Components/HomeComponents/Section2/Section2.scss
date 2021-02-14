@@ -1,30 +1,184 @@
 $mainfont: "Poppins", sans-serif;
 $bgcolor: rgb(25, 27, 50);
-
+$liquidColor: rgb(85, 86, 110);
 .Section2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  height: auto;
   font-family: $mainfont;
   color: white;
-  background-color: red;
+
+  // padding-top: 5rem;
+  // padding-bottom: 5rem;
+  padding-left: 10rem;
 
   .leftSection2 {
     display: flex;
     flex-direction: column;
     background-color: $bgcolor;
+    padding-top: 3rem;
 
     .leftTop {
       display: flex;
       flex-direction: row;
+      padding-right: 10rem;
 
       p {
         flex: 80%;
+        font-size: 28px;
+        font-weight: 600;
       }
 
       img {
         flex: 20%;
+        height: 100%;
+        width: 100%;
       }
+    }
+
+    .leftBody {
+      padding-bottom: 3rem;
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .leftFooter {
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+      justify-content: left;
+      align-items: center;
+      height: 3.5rem;
+      font-size: 18px;
+
+      &:hover > .bgLiquid {
+        width: 13rem;
+      }
+
+      width: 12rem;
+      position: relative;
+      cursor: pointer;
+      padding-left: 1rem;
+
+      .findOutBtn {
+        z-index: 6;
+        font-weight: 600;
+        &:hover > .bgLiquid {
+          width: 10rem;
+        }
+      }
+      .fas {
+        z-index: 5;
+        &:hover + .bgLiquid {
+          width: 12rem;
+        }
+      }
+      .bgLiquid {
+        background-color: $liquidColor;
+        height: 3.5rem;
+        width: 3.7rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 4;
+        transition: width 0.5s ease-in-out;
+      }
+    }
+  }
+
+  .rightSection2 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .pulse {
+      height: 120px;
+      width: 120px;
+      background-color: lightblue;
+      border: 2px solid lightblue;
+      border-radius: 50%;
+      position: absolute;
+      top: 38%;
+      right: 44.5%;
+
+      animation: myPulse 1s infinite ease-in-out;
+
+      @keyframes myPulse {
+        from {
+          transform: scale(1, 1);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1.1, 1.1);
+          opacity: 0.5;
+        }
+      }
+    }
+
+    .btnSection2 {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      top: 50%;
+      right: 40%;
+      transform: translate(-60%, -50%);
+      cursor: pointer;
+
+      .outerCi {
+        position: relative;
+        height: 90px;
+        width: 90px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+
+        .innerCi {
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          border: 1px solid black;
+          display: flex;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          position: relative;
+
+          p {
+            z-index: 99;
+            color: black;
+          }
+        }
+      }
+    }
+    .rightFooter {
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+      bottom: 20%;
+      left: 40%;
+      height: 3.5rem;
+      width: auto;
+      background-color: $bgcolor;
+      font-size: 22px;
+      padding: 1rem;
+      cursor: pointer;
+      p {
+        margin-left: 5px;
+      }
+    }
+
+    img {
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }

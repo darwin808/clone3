@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useMemo } from "react";
 import "./MainSlider.scss";
 
 import img1 from "../../assets/slider-image-first.jpg";
@@ -12,9 +12,9 @@ function MainSlider() {
   const increment = useCallback(() => {
     counter > 1 ? setcounter(0) : setcounter(counter + 1);
   }, [counter]);
-  const decrement = () => {
+  const decrement = useCallback(() => {
     counter < 1 ? setcounter(2) : setcounter(counter - 1);
-  };
+  }, [counter]);
   useEffect(() => {
     setTimeout(() => {
       increment();

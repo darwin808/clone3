@@ -1,5 +1,7 @@
 import "./Section2.scss";
 import React from "react";
+import hiaLogo from "../../assets/hia-member-10-years (1).png";
+import hiaPres from "../../assets/hyden-inner-image.jpg";
 
 function Section2() {
   return (
@@ -12,8 +14,9 @@ function Section2() {
             specialising in building Turn-Key <br /> properties.
           </p>
 
-          <img src="qweq" alt="qweq" />
+          <img src={hiaLogo} alt="qweq" />
         </div>
+
         <div className="leftBody">
           <p>
             With over 25 years building experience and know-how, the driving
@@ -27,12 +30,29 @@ function Section2() {
             every step of the way.
           </p>
         </div>
-        <div className="leftFooter">qweq</div>
+        <div className="leftFooter">
+          <p id="findOutBtn" className="findOutBtn">
+            FIND OUT MORE{" "}
+          </p>
+          <i className="fas fa-long-arrow-alt-right"></i>
+          <div className="bgLiquid" id="bgLiquid"></div>
+        </div>
       </div>
       <div className="rightSection2">
-        <img src="qwe" alt="qwe" />
-        <div className="btn">qweqeq</div>
-        <div className="rightFooter">qweq</div>
+        {" "}
+        <div className="pulse"></div>
+        <img src={hiaPres} alt="qwe" />
+        <div className="btnSection2">
+          <div className="outerCi">
+            <div className="innerCi">
+              <p>▶</p>
+            </div>
+          </div>
+        </div>
+        <div className="rightFooter">
+          <i className="fas fa-microphone-alt"></i>
+          <p>Subsribe to our week Podcast</p>
+        </div>
       </div>
     </div>
   );

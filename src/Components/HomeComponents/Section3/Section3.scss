@@ -1,0 +1,93 @@
+$mainfont: "Poppins", sans-serif;
+$bgcolor: rgb(25, 27, 50);
+
+.Section3 {
+  height: 50vh;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: $mainfont;
+
+  background-color: white;
+
+  .leftSection3 {
+    flex: 60%;
+    height: 50vh;
+    img {
+      height: 100%;
+      width: 108.5%;
+    }
+  }
+
+  .rightSection3 {
+    flex: 40%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    padding-left: 10rem;
+    .headSection3 {
+      font-size: 42px;
+      color: black;
+      font-weight: 600;
+      margin-bottom: 0rem;
+    }
+
+    .lineSection3 {
+      height: 1px;
+      width: 6rem;
+      background-color: black;
+      margin-bottom: 1rem;
+    }
+
+    .bodySection3 {
+      font-size: 16px;
+      margin-bottom: 3rem;
+    }
+
+    .fooSection3 {
+      position: relative;
+      &:hover + .Btn2 {
+        width: 12rem;
+      }
+      .LiquidBtn {
+        position: relative;
+        font-size: 18px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: white;
+        height: 3.5rem;
+        width: 13rem;
+
+        &:hover > #Liq {
+          width: 13rem;
+        }
+        #findS3 {
+          margin-right: 10px;
+          font-weight: 500;
+          cursor: pointer;
+          z-index: 6;
+        }
+
+        i {
+          font-size: 20px;
+          z-index: 9;
+        }
+
+        .Liq,
+        #Liq {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 3rem;
+          height: 3.5rem;
+          background-color: #d3d7ee;
+          z-index: 1;
+          transition: width 0.1s ease-in-out;
+        }
+      }
+    }
+  }
+}

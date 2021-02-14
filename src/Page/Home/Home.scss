@@ -1,7 +1,9 @@
-.Home{
-    display: flex;
-    flex-direction: column;
-    background-color: yellowgreen;
-    height: 550vh;
-    overflow: hidden;
+$bgcolor: rgb(25, 27, 50);
+
+.Home {
+  display: flex;
+  flex-direction: column;
+  background-color: $bgcolor;
+  height: 550vh;
+  overflow: hidden;
 }
