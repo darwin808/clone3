@@ -1,0 +1,33 @@
+.btnContainer {
+  position: relative;
+  height: 3.5rem;
+  width: 12rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover > .liquid {
+    width: 12rem;
+  }
+
+  .liquid {
+    background-color: grey;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3.5rem;
+    width: 3rem;
+    z-index: 3;
+    transition: width 0.5s ease-in-out;
+  }
+
+  p,
+  .fas {
+    color: white;
+    margin-right: 5px;
+    z-index: 4;
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
