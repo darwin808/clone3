@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import logo1 from "../../../assets/pivotal-logo.png";
 import "./Nav2.scss";
 import About1 from "../HoverAbout/About";
+
+function useWindow() {
+  const [size, setsize] = useState([window.innerWidth, window.innerHeight]);
+  useEffect(() => {
+    const handleresize = () => {
+      setsize([window.innerWidth, window.innerHeight]);
+    };
+    window.addEventListener("resize", handleresize);
+  }, []);
+  return size;
+}
 
 function Nav2() {
   const [bgMsg, setbgMsg] = useState<boolean>(false);

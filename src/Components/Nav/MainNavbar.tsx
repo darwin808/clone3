@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 
 import Nav1 from "./Nav1/Nav1";
 import Nav2 from "./Nav2/Nav2";
+import Nav3 from "./Nav3/Nav3";
 
 function useScroll() {
   const [scroller, setScroll] = useState([window.scrollX, window.scrollY]);
@@ -27,9 +28,20 @@ function useWindow() {
 }
 
 function MainNavbar() {
+  const [mobileX, mobileY] = useWindow();
   const [scrollX, scrollY] = useScroll();
 
-  return <div className="MainNavbar">{scrollY > 20 ? <Nav2 /> : <Nav1 />}</div>;
+  return (
+    <div className="MainNavbar">
+      {" "}
+      <h1>{mobileX}</h1>{" "}
+      {
+        mobileX < 900 ? <Nav3 /> : scrollY > 20 ? <Nav2 /> : <Nav1 />
+
+        // scrollY > 20 ? <Nav2 /> : <Nav1 />
+      }
+    </div>
+  );
 }
 
 export default MainNavbar;
