@@ -3,6 +3,8 @@ $bgcolor: rgb(25, 27, 50);
 $liquidColor: rgb(85, 86, 110);
 
 @mixin Section2(
+  $imgDisplay,
+  $displayBtn,
   $flexDs2,
   $p1,
   $p2,
@@ -44,10 +46,10 @@ $liquidColor: rgb(85, 86, 110);
           padding-bottom: $mb-s2;
         }
 
-        img {
-          flex: 20%;
-          height: imgH;
-          width: imgW;
+        #img11 {
+          display: $imgDisplay;
+          height: $imgH;
+          max-width: $imgW;
         }
       }
 
@@ -59,7 +61,7 @@ $liquidColor: rgb(85, 86, 110);
       }
 
       .leftFooter {
-        display: flex;
+        display: $displayBtn;
         flex-direction: row;
         text-align: center;
         justify-content: left;
@@ -113,8 +115,9 @@ $liquidColor: rgb(85, 86, 110);
         border: 2px solid lightblue;
         border-radius: 50%;
         position: absolute;
-        top: 38%;
-        right: 44.5%;
+        top: 40%;
+        right: 40%;
+        transform: translate(-60, -60);
 
         animation: myPulse 1s infinite ease-in-out;
 
@@ -136,9 +139,9 @@ $liquidColor: rgb(85, 86, 110);
         justify-content: center;
         text-align: center;
         align-items: center;
-        top: 50%;
-        right: 40%;
-        transform: translate(-60%, -50%);
+        top: 43%;
+        right: 42%;
+        //transform: translate(-65, -55);
         cursor: pointer;
 
         .outerCi {
@@ -177,8 +180,8 @@ $liquidColor: rgb(85, 86, 110);
         justify-content: center;
         text-align: center;
         align-items: center;
-        bottom: 20%;
-        left: 40%;
+        bottom: 15%;
+        left: 30%;
         height: 3.5rem;
         width: auto;
         background-color: $bgcolor;
@@ -209,35 +212,95 @@ $liquidColor: rgb(85, 86, 110);
     $displayRight: none,
     $height: 100vh,
     $mb-s2: 2rem,
-    $imgH: 40px,
-    $imgW: 40px
+    $imgH: 10px,
+    $imgW: 10px,
+    $displayBtn: none,
+    $imgDisplay: none
   );
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media (min-width: 600px) and (max-width: 767px) {
+  @include Section2(
+    $flexDs2: row,
+    $p1: 20px,
+    $p2: 15px,
+    $pd-r-s2: 0,
+    $pd-l-s2: 1rem,
+    $frame-col: 0,
+    $displayRight: none,
+    $height: auto,
+    $mb-s2: 2rem,
+    $imgH: 10px,
+    $imgW: 10px,
+    $displayBtn: none,
+    $imgDisplay: none
+  );
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+  @include Section2(
+    $flexDs2: row,
+    $p1: 20px,
+    $p2: 15px,
+    $pd-r-s2: 0,
+    $pd-l-s2: 1rem,
+    $frame-col: 0,
+    $displayRight: none,
+    $height: auto,
+    $mb-s2: 2rem,
+    $imgH: 10px,
+    $imgW: 10px,
+    $displayBtn: none,
+    $imgDisplay: none
+  );
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199px) {
+  @include Section2(
+    $flexDs2: row,
+    $p1: 25px,
+    $p2: 14px,
+    $pd-r-s2: 10rem,
+    $pd-l-s2: 10rem,
+    $frame-col: 1fr,
+    $displayRight: none,
+    $height: auto,
+    $mb-s2: 3rem,
+    $imgH: 100%,
+    $imgW: 100%,
+    $displayBtn: none,
+    $imgDisplay: none
+  );
 }
 
 @media (min-width: 1200px) and (max-width: 4000px) {
   @include Section2(
     $flexDs2: row,
-    $p1: 28px,
+    $p1: 20px,
     $p2: 16px,
     $pd-r-s2: 10rem,
     $pd-l-s2: 10rem,
     $frame-col: 1fr,
     $displayRight: flex,
     $height: auto,
-    $mb-s2: 0,
+    $mb-s2: 3rem,
     $imgH: 100%,
-    $imgW: 100%
+    $imgW: 100%,
+    $displayBtn: flex,
+    $imgDisplay: flex
   );
 }
+
+// 0 = The Elvine
+// 1 = The Jango
+// 2 = The Courde
+// 3 = The Levone
+// 4 = The Pastel
+// 5 = "The Concorde"
+// 6 = "The Kamdor"
+// 7 = "The Bucherrey"
+// 8 = "The Levonedad
+// 9 = "The Jest"

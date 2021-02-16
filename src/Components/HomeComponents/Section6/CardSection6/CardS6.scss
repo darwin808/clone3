@@ -1,4 +1,5 @@
 .CardS6 {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -30,6 +31,7 @@
     align-items: center;
 
     h1 {
+      font-weight: 400;
     }
     .cardBtnS6 {
     }

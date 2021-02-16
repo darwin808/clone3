@@ -14,7 +14,7 @@ function Section2() {
             specialising in building Turn-Key <br /> properties.
           </p>
 
-          <img src={hiaLogo} alt="qweq" />
+          <img id="img11" src={hiaLogo} alt="qweq" />
         </div>
 
         <div className="leftBody">

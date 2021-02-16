@@ -1,6 +1,6 @@
 $mainfont: "Poppins", sans-serif;
 $bgcolor: rgb(25, 27, 50);
-@mixin sliderS1($h1-Height, $h2-Height, $flexD, $mb, $displayFoo) {
+@mixin sliderS1($h1-Height, $h2-Height, $flexD, $mb, $displayFoo, $pt) {
   .MainSlider {
     display: flex;
     flex-direction: column;
@@ -94,6 +94,7 @@ $bgcolor: rgb(25, 27, 50);
       color: white;
 
       h1 {
+        padding-top: $pt;
         font-size: $h1-Height;
       }
       h2 {
@@ -194,7 +195,8 @@ $bgcolor: rgb(25, 27, 50);
     $h2-Height: 14px,
     $flexD: column,
     $mb: 1rem,
-    $displayFoo: none
+    $displayFoo: none,
+    $pt: 7rem
   );
 }
 
@@ -205,7 +207,8 @@ $bgcolor: rgb(25, 27, 50);
     $h2-Height: 18px,
     $flexD: column,
     $mb: 1rem,
-    $displayFoo: none
+    $displayFoo: none,
+    $pt: 1rem
   );
 }
 
@@ -216,7 +219,8 @@ $bgcolor: rgb(25, 27, 50);
     $h2-Height: 20px,
     $flexD: column,
     $mb: 1rem,
-    $displayFoo: none
+    $displayFoo: none,
+    $pt: 1rem
   );
 }
 
@@ -227,7 +231,8 @@ $bgcolor: rgb(25, 27, 50);
     $h2-Height: 25px,
     $flexD: row,
     $mb: 0,
-    $displayFoo: flex
+    $displayFoo: flex,
+    $pt: 1rem
   );
 }
 
@@ -237,6 +242,7 @@ $bgcolor: rgb(25, 27, 50);
     $h2-Height: 30px,
     $flexD: row,
     $mb: 0,
-    $displayFoo: flex
+    $displayFoo: flex,
+    $pt: 1rem
   );
 }

@@ -12,8 +12,6 @@ import img8 from "../../assets/8.jpg";
 import img9 from "../../assets/9.jpg";
 import img10 from "../../assets/10.jpg";
 import CardS6 from "./CardSection6/CardS6";
-import rightArr from "../../assets/test-next-arrow.png";
-import leftArr from "../../assets/test-prev-arrow.png";
 
 function Section6() {
   const [counterS6, setcounterS6] = useState<number>(0);
@@ -22,182 +20,182 @@ function Section6() {
     [
       {
         img0: img1,
-        title0: "0",
+        title0: "The Elvine",
       },
       {
         img1: img2,
-        title1: "1",
+        title1: "The Jango",
       },
       {
         img2: img3,
-        title2: "2",
+        title2: "The Courde",
       },
       {
         img3: img4,
-        title3: "3",
+        title3: "The Levone",
       },
     ],
 
     [
       {
         img0: img2,
-        title0: "1",
+        title0: "The Jango",
       },
       {
         img1: img3,
-        title1: "2",
+        title1: "The Courde",
       },
       {
         img2: img4,
-        title2: "3",
+        title2: "The Levone",
       },
       {
         img3: img5,
-        title3: "4",
+        title3: "The Pastel",
       },
     ],
     [
       {
         img0: img3,
-        title0: "2",
+        title0: "The Courde",
       },
       {
         img1: img4,
-        title1: "3",
+        title1: "The Levone",
       },
       {
         img2: img5,
-        title2: "4",
+        title2: "The Pastel",
       },
       {
         img3: img6,
-        title3: "5",
+        title3: "The Concorde",
       },
     ],
     [
       {
         img0: img4,
-        title0: "3",
+        title0: "The Levone",
       },
       {
         img1: img5,
-        title1: "4",
+        title1: "The Pastel",
       },
       {
         img2: img6,
-        title2: "5",
+        title2: "The Concorde",
       },
       {
         img3: img7,
-        title3: "6",
+        title3: "The Kamdor",
       },
     ],
     [
       {
         img0: img5,
-        title0: "4",
+        title0: "The Pastel",
       },
       {
         img1: img6,
-        title1: "5",
+        title1: "The Concorde",
       },
       {
         img2: img7,
-        title2: "6",
+        title2: "The Kamdor",
       },
       {
         img3: img8,
-        title3: "7",
+        title3: "The Buchanan",
       },
     ],
     [
       {
         img0: img6,
-        title0: "5",
+        title0: "The Concorde",
       },
       {
         img1: img7,
-        title1: "6",
+        title1: "The Kamdor",
       },
       {
         img2: img8,
-        title2: "7",
+        title2: "The Buchanan",
       },
       {
         img3: img9,
-        title3: "8",
+        title3: "The Levonedad",
       },
     ],
     [
       {
         img0: img7,
-        title0: "6",
+        title0: "The Kamdor",
       },
       {
         img1: img8,
-        title1: "7",
+        title1: "The Buchanan",
       },
       {
         img2: img9,
-        title2: "8",
+        title2: "The Levonedad",
       },
       {
         img3: img10,
-        title3: "9",
+        title3: "The Jest",
       },
     ],
     [
       {
         img0: img8,
-        title0: "7",
+        title0: "The Buchanan",
       },
       {
         img1: img9,
-        title1: "8",
+        title1: "The Levonedad",
       },
       {
         img2: img10,
-        title2: "9",
+        title2: "The Jest",
       },
       {
         img3: img1,
-        title3: "0",
+        title3: "The Elvine",
       },
     ],
     [
       {
         img0: img9,
-        title0: "8",
+        title0: "The Levonedad",
       },
       {
         img1: img10,
-        title1: "9",
+        title1: "The Jest",
       },
       {
         img2: img1,
-        title2: "0",
+        title2: "The Elvine",
       },
       {
         img3: img2,
-        title3: "1",
+        title3: "The Jango",
       },
     ],
     [
       {
         img0: img10,
-        title0: "9",
+        title0: "The Jest",
       },
       {
         img1: img1,
-        title1: "0",
+        title1: "The Elvine",
       },
       {
         img2: img2,
-        title2: "1",
+        title2: "The Jango",
       },
       {
         img3: img3,
-        title3: "2",
+        title3: "The Courde",
       },
     ],
   ];
@@ -239,12 +237,12 @@ function Section6() {
         <div className="leftFooS6"></div>
         <div className="rightFooS6">
           <div className="btnFooS6">
-            <div className="leftBtn">
-              <i className="fas fa-chevron-left" onClick={decrements6}></i>
+            <div className="leftBtn" onClick={decrements6}>
+              <i className="fas fa-chevron-left"></i>
             </div>
-            <div className="rightBtn">
+            <div className="rightBtn" onClick={increments6}>
               {" "}
-              <i className="fas fa-chevron-right" onClick={increments6}></i>
+              <i className="fas fa-chevron-right"></i>
             </div>
           </div>
           <div className="progressBars6">

@@ -33,8 +33,6 @@ function MainNavbar() {
 
   return (
     <div className="MainNavbar">
-      {" "}
-      <h1>{mobileX}</h1>{" "}
       {
         mobileX < 900 ? <Nav3 /> : scrollY > 20 ? <Nav2 /> : <Nav1 />
 

@@ -1,93 +1,153 @@
 $mainfont: "Poppins", sans-serif;
 $bgcolor: rgb(25, 27, 50);
 
-.Section3 {
-  height: 50vh;
-  width: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-family: $mainfont;
-
-  background-color: white;
-
-  .leftSection3 {
-    flex: 60%;
+@mixin section3($imgDisplay, $h1Ht, $h2Ht, $pdR, $pdT, $grid) {
+  .Section3 {
     height: 50vh;
-    #imgS3 {
-      height: 100%;
-      width: 108.5%;
-    }
-  }
+    width: auto;
+    display: grid;
+    grid-template-columns: 1fr $grid;
+    font-family: $mainfont;
 
-  .rightSection3 {
-    flex: 40%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 5rem;
-    padding-left: 10rem;
-    .headSection3 {
-      font-size: 42px;
-      color: black;
-      font-weight: 600;
-      margin-bottom: 0rem;
-    }
+    background-color: white;
 
-    .lineSection3 {
-      height: 1px;
-      width: 6rem;
-      background-color: black;
-      margin-bottom: 1rem;
-    }
-
-    .bodySection3 {
-      font-size: 16px;
-      margin-bottom: 3rem;
-    }
-
-    .fooSection3 {
-      position: relative;
-      &:hover + .Btn2 {
-        width: 12rem;
+    .leftSection3 {
+      display: $imgDisplay;
+      flex: 60%;
+      height: 50vh;
+      #imgS3 {
+        height: 100%;
+        width: 108.5%;
       }
-      .LiquidBtn {
+    }
+
+    .rightSection3 {
+      flex: 40%;
+      display: flex;
+      flex-direction: column;
+      padding-top: $pdT;
+      padding-left: $pdR;
+      .headSection3 {
+        font-size: $h1Ht;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 0rem;
+      }
+
+      .lineSection3 {
+        height: 1px;
+        width: 6rem;
+        background-color: black;
+        margin-bottom: 1rem;
+      }
+
+      .bodySection3 {
+        font-size: $h2Ht;
+        margin-bottom: 3rem;
+      }
+
+      .fooSection3 {
         position: relative;
-        font-size: 18px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        background-color: white;
-        height: 3.5rem;
-        width: 13rem;
-
-        &:hover > #Liq {
-          width: 13rem;
+        &:hover + .Btn2 {
+          width: 12rem;
         }
-        #findS3 {
-          margin-right: 10px;
-          font-weight: 500;
-          cursor: pointer;
-          z-index: 6;
-        }
-
-        i {
-          font-size: 20px;
-          z-index: 9;
-        }
-
-        .Liq,
-        #Liq {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 3rem;
+        .LiquidBtn {
+          position: relative;
+          font-size: 18px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          background-color: white;
           height: 3.5rem;
-          background-color: #d3d7ee;
-          z-index: 1;
-          transition: width 0.1s ease-in-out;
+          width: 13rem;
+
+          &:hover > #Liq {
+            width: 13rem;
+          }
+          #findS3 {
+            margin-right: 10px;
+            font-weight: 500;
+            cursor: pointer;
+            z-index: 6;
+          }
+
+          i {
+            font-size: 20px;
+            z-index: 9;
+          }
+
+          .Liq,
+          #Liq {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3rem;
+            height: 3.5rem;
+            background-color: #d3d7ee;
+            z-index: 1;
+            transition: width 0.1s ease-in-out;
+          }
         }
       }
     }
   }
+}
+@media only screen and (max-width: 600px) {
+  @include section3(
+    $imgDisplay: none,
+    $h1Ht: 20px,
+    $h2Ht: 10px,
+    $pdR: 1rem,
+    $pdT: 1rem,
+    $grid: none
+  );
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 767px) {
+  @include section3(
+    $imgDisplay: none,
+    $h1Ht: 20px,
+    $h2Ht: 10px,
+    $pdR: 1rem,
+    $pdT: 1rem,
+    $grid: none
+  );
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  @include section3(
+    $imgDisplay: none,
+    $h1Ht: 20px,
+    $h2Ht: 10px,
+    $pdR: 1rem,
+    $pdT: 1rem,
+    $grid: none
+  );
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  @include section3(
+    $imgDisplay: inline,
+    $h1Ht: 42px,
+    $h2Ht: 16px,
+    $pdT: 5rem,
+    $pdR: 10rem,
+    $grid: 1fr
+  );
+}
+
+@media (min-width: 1200px) and (max-width: 4000px) {
+  @include section3(
+    $imgDisplay: inline,
+    $h1Ht: 42px,
+    $h2Ht: 16px,
+    $pdT: 5rem,
+    $pdR: 10rem,
+    $grid: 1fr
+  );
 }

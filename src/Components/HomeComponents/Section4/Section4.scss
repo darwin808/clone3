@@ -1,82 +1,168 @@
 $mainfont: "Poppins", sans-serif;
 $bgcolor: rgb(25, 27, 50);
 
-.Section4 {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  font-family: $mainfont;
-  color: white;
-  padding-top: 9rem;
-  .topSection4 {
+@mixin Section4(
+  $column,
+  $pl,
+  $pt,
+  $header,
+  $subheader,
+  $line,
+  $gap,
+  $padding,
+  $grid
+) {
+  .Section4 {
     display: flex;
-    flex-direction: row;
-    .leftTop {
-      flex: 60%;
-      padding-left: 10rem;
+    flex-direction: column;
+    height: auto;
+    font-family: $mainfont;
+    color: white;
+    padding-top: $pt;
+    .topSection4 {
       display: flex;
-      flex-direction: column;
+      flex-direction: $column;
+      .leftTop {
+        flex: 60%;
+        padding-left: $pl;
+        display: flex;
+        flex-direction: column;
 
-      h1 {
-        font-size: 42px;
-        margin-bottom: 1rem;
+        h1 {
+          font-size: $header;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: $subheader;
+          margin-bottom: 1rem;
+        }
+        .lineTop {
+          width: 3rem;
+          display: $line;
+          height: 1px;
+          background-color: white;
+        }
       }
-      h2 {
-        font-size: 16px;
-        margin-bottom: 1rem;
-      }
-      .lineTop {
-        width: 3rem;
-        height: 1px;
-        background-color: white;
-      }
-    }
-    .rightTop {
-      flex: 40%;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      padding-right: 10rem;
-
-      .ViewBtn {
-        position: relative;
+      .rightTop {
+        flex: 40%;
         display: flex;
         flex-direction: row;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        height: 3.5rem;
-        width: 12rem;
+        justify-content: flex-end;
+        padding-right: 10rem;
 
-        cursor: pointer;
-
-        &:hover > .Liq2 {
-          width: 12rem;
-        }
-
-        .Liq2 {
-          position: absolute;
-          top: 0;
-          left: 0;
+        .ViewBtn {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
           height: 3.5rem;
-          width: 3rem;
-          background-color: #d3d7ee;
-          z-index: 5;
-          transition: width 0.5s ease-in-out;
-        }
-        p,
-        .fas {
-          font-weight: 700;
-          margin-right: 10px;
-          z-index: 6;
+          width: 12rem;
+
+          cursor: pointer;
+
+          &:hover > .Liq2 {
+            width: 12rem;
+          }
+
+          .Liq2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 3.5rem;
+            width: 3rem;
+            background-color: #d3d7ee;
+            z-index: 5;
+            transition: width 0.5s ease-in-out;
+          }
+          p,
+          .fas {
+            font-weight: 700;
+            margin-right: 10px;
+            z-index: 6;
+          }
         }
       }
     }
+    .bodySection4 {
+      display: grid;
+      grid-template-columns: $grid;
+      gap: $gap;
+      padding: $padding;
+    }
   }
-  .bodySection4 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 10rem;
-    padding: 7rem 10rem;
-  }
+}
+
+@media only screen and (max-width: 600px) {
+  @include Section4(
+    $pl: 1rem,
+    $pt: 1rem,
+    $column: column,
+    $header: 20px,
+    $subheader: 10px,
+    $line: none,
+    $grid: 1fr,
+    $padding: 1rem,
+    $gap: 1rem
+  );
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media (min-width: 600px) and (max-width: 767px) {
+  @include Section4(
+    $pl: 1rem,
+    $pt: 1rem,
+    $column: column,
+    $header: 20px,
+    $subheader: 10px,
+    $line: none,
+    $grid: 1fr,
+    $padding: 1rem,
+    $gap: 1rem
+  );
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+  @include Section4(
+    $pl: 1rem,
+    $pt: 1rem,
+    $column: column,
+    $header: 20px,
+    $subheader: 10px,
+    $line: none,
+    $grid: 1fr,
+    $padding: 1rem,
+    $gap: 1rem
+  );
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  @include Section4(
+    $pl: 10rem,
+    $pt: 10rem,
+    $column: row,
+    $header: 42px,
+    $subheader: 16px,
+    $line: inline,
+    $grid: 1fr 1fr 1fr,
+    $padding: 7rem 10rem,
+    $gap: 10rem
+  );
+}
+
+@media (min-width: 1200px) and (max-width: 4000px) {
+  @include Section4(
+    $pl: 10rem,
+    $pt: 10rem,
+    $column: row,
+    $header: 42px,
+    $subheader: 16px,
+    $line: inline,
+    $grid: 1fr 1fr 1fr,
+    $padding: 7rem 10rem,
+    $gap: 10rem
+  );
 }
