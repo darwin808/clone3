@@ -1,0 +1,118 @@
+$mainfont: "Poppins", sans-serif;
+$bgcolor: rgb(25, 27, 50);
+.Nav3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  background-color: $bgcolor;
+  padding: 2rem 2rem;
+  font-family: $mainfont;
+  font-weight: 600;
+  color: white;
+  font-size: 15px;
+  height: 5vh;
+
+  .NavLeft {
+    img {
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .NavRight {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 100vh;
+    width: 100%;
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    #home {
+      font-size: 22px;
+      margin-bottom: 2rem;
+    }
+    .NavItems {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2rem;
+      cursor: pointer;
+      &:hover > .line {
+        width: 2rem;
+      }
+      .line {
+        width: 0rem;
+        height: 2px;
+        background: white;
+        transition: width 0.6s;
+      }
+    }
+    .whiteCircle {
+      display: none;
+      position: absolute;
+      top: -1rem;
+      right: 1rem;
+      height: 70px;
+      width: 70px;
+      background-color: white;
+      border-radius: 50%;
+      z-index: 1;
+      transition: 0.3s ease-in-out;
+      // animation: myMove 5s ease-in-out;
+      // @keyframes myMove {
+      //     0% {
+      //         opacity: 0;
+      //         scale: 0;
+      //     }
+      //     75% {
+      //         opacity: 0.7;
+      //         scale: 1.5;
+      //     }
+      //     100% {
+      //         opacity: 1;
+      //         scale: 2;
+      //     }
+      // }
+    }
+    .envelope {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: white;
+      position: relative;
+      z-index: 99;
+      .far {
+        color: black;
+        font-size: 18px;
+        z-index: 99;
+        &:hover + .whiteCircle {
+          width: 200px;
+        }
+      }
+      .floatContact {
+        display: none;
+        top: 4rem;
+        right: 0.6rem;
+        position: absolute;
+        writing-mode: tb-rl;
+        width: auto;
+        white-space: nowrap;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}
